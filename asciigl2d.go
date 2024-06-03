@@ -1,4 +1,4 @@
-package github.com/burakturkerdev/asciigl2d
+package asciigl2d
 
 import (
 	"fmt"
