@@ -92,4 +92,4 @@ func main() {
 			p[2] = int(asciigl2d.ColorBlue) // Set color to blue
 		}
 	}
-}```
+}
