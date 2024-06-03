@@ -1,3 +1,3 @@
-module github.com/burakturkerdev/asciigl2d
+module asciigl2d
 
 go 1.22.3
