@@ -1,5 +1,5 @@
 # asciigl2d
-AsciiGL2D is a simple ASCII graphics library supporting animations, colors, and precise character rendering for creating dynamic visualizations.
+AsciiGL2D is a simple ASCII graphics library supporting animations, colors, and individual character rendering for creating dynamic visualizations.
 
 This library provides a convenient abstraction for generating 2D ASCII graphics. By defining object vertices, you can effortlessly draw shapes. Each "pixel," though technically a character within the ASCII terminal, functions akin to a pixel in real displays, undergoing updates in position, color, or character directly affecting the frame. Additionally, frame generation optimizes efficiency by rendering only those individual pixels that have changed.
 
