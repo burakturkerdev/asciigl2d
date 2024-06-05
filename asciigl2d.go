@@ -121,7 +121,7 @@ func PixelCharBuff(x int, y int) *int {
 // GenerateFrame checks for differences between the current and previous buffer and updates individual pixels accordingly.
 func GenerateFrame() {
 	for i := range currentBuffer {
-		if currentBuffer[i][2] != previousBuffer[i][2] || currentBuffer[i][3] != previousBuffer[i][3] {
+		if currentBuffer[i][0] != previousBuffer[i][0] || currentBuffer[i][1] != previousBuffer[i][1] || currentBuffer[i][2] != previousBuffer[i][2] || currentBuffer[i][3] != previousBuffer[i][3] {
 			// Asynchronously update individual pixel.
 			go asciiSyncPixel(currentBuffer[i])
 		}
