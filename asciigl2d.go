@@ -131,7 +131,7 @@ func GenerateFrame() {
 
 // asciiSyncPixel synchronizes ASCII terminal output with the pixel information.
 func asciiSyncPixel(p Pixel) {
-	setCursorPosition := fmt.Sprintf("\033[%d;%dH", p[1], p[0]) // Set cursor position.
+	setCursorPosition := fmt.Sprintf("\033[%d;%dH", p[0], p[1]) // Set cursor position.
 	colorCode := fmt.Sprintf("\033[%dm", p[2])                  // Get ANSI color code.
 	if p[2] != int(ColorNone) {
 		fmt.Printf("%s%s%c\033[0m", setCursorPosition, colorCode, rune(p[3])) // Print pixel information with proper formatting.
