@@ -135,5 +135,7 @@ func asciiSyncPixel(p Pixel) {
 	colorCode := fmt.Sprintf("\033[%dm", p[2])                  // Get ANSI color code.
 	if p[2] != int(ColorNone) {
 		fmt.Printf("%s%s%c\033[0m", setCursorPosition, colorCode, rune(p[3])) // Print pixel information with proper formatting.
+	} else {
+		fmt.Printf("%s%s", setCursorPosition, " ")
 	}
 }
