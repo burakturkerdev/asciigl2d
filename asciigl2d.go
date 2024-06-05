@@ -11,6 +11,7 @@ type Vertices [4][2]int
 // It contains the X and Y coordinates, color code, and character as integers.
 type Pixel [4]int
 
+// Clears pixel
 func(p *Pixel) Clear(){
 	p[2] = int(ColorNone)
 	p[3] = '-'
