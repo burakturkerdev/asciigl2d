@@ -105,17 +105,17 @@ func FillArea(areaVertices [][2]int, color ColorCode, char int) {
 
 // PixelPointer returns a pointer to a pixel at specified coordinates (x, y).
 func PixelPointer(x int, y int) *Pixel {
-	return &currentBuffer[y*mVertices[1][0]+x]
+	return &currentBuffer[x*mVertices[1][0]+y]
 }
 
 // PixelColorBuff returns a pointer to the color buffer of the pixel at coordinates (x, y).
 func PixelColorBuff(x int, y int) *int {
-	return &currentBuffer[y*mVertices[1][0]+x][2]
+	return &currentBuffer[x*mVertices[1][0]+y][2]
 }
 
 // PixelCharBuff returns a pointer to the character buffer of the pixel at coordinates (x, y).
 func PixelCharBuff(x int, y int) *int {
-	return &currentBuffer[y*mVertices[1][0]+x][3]
+	return &currentBuffer[x*mVertices[1][0]+y][3]
 }
 
 // GenerateFrame checks for differences between the current and previous buffer and updates individual pixels accordingly.
