@@ -69,7 +69,7 @@ func SetVertices(v Vertices) {
 func rayCast(vertices [][2]int) []*Pixel {
 	pixels := []*Pixel{}
 
-	for i, p := range currentBuffer {
+	for _, p := range currentBuffer {
 
 		n := len(vertices)
 		inside := false
@@ -81,7 +81,7 @@ func rayCast(vertices [][2]int) []*Pixel {
 			j = i
 		}
 		if inside {
-			pixels = append(pixels, &currentBuffer[i])
+			pixels = append(pixels, &currentBuffer[p[1]*mVertices[1][0] + p[0]])
 		}
 	}
 
